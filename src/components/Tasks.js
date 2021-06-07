@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-//voy a impoart el componete Task
 import Task from './Task';
+
+import PropTypes from 'prop-types';
 
 class Tasks extends Component {
     render() {
@@ -9,6 +10,11 @@ class Tasks extends Component {
         )
         
     }
+}
+
+Tasks.propTypes = {
+    // Asignando el tipo de datos que puede ser los props que nos estan pasando 
+    tasks: PropTypes.array.isRequired 
 }
 
 export default Tasks

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-// esto es un componete para cada tarea
+import PropTypes from 'prop-types';
+
 class Task extends Component {
 
     //Vamos a crear una funciona para camabiar los css
@@ -26,6 +27,11 @@ class Task extends Component {
             <button style={btnDeleteStyle}>x</button>
         </p>
     }
+}
+
+Task.propTypes = {
+    // Con esto la propiedad task es obligatoria tipo objeto.
+    task: PropTypes.object.isRequired
 }
 
 const btnDeleteStyle = {
