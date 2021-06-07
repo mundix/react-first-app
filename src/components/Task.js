@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 class Task extends Component {
 
-    //Vamos a crear una funciona para camabiar los css
     StyleCompleted(){
         return  {
             fontSize: '20px',
@@ -14,11 +13,7 @@ class Task extends Component {
 
     render(){
 
-        //con esto evito exribir this.props.task.title  solo {task}
         const {task} = this.props;
-        // console.log("Llego al Task id",this.props.task.id, this.props);
-
-        // return <p className='red'>
         return <p style={this.StyleCompleted()}>
             {task.title} - 
             {task.description} - 
@@ -36,7 +31,6 @@ class Task extends Component {
 }
 
 Task.propTypes = {
-    // Con esto la propiedad task es obligatoria tipo objeto.
     task: PropTypes.object.isRequired
 }
 

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 class Tasks extends Component {
     render() {
-        // console.log("Llego a tasks: ",this.props);
         return (
             this.props.tasks.map(task => 
             <Task 
@@ -21,7 +20,6 @@ class Tasks extends Component {
 }
 
 Tasks.propTypes = {
-    // Asignando el tipo de datos que puede ser los props que nos estan pasando 
     tasks: PropTypes.array.isRequired 
 }
 

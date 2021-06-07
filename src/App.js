@@ -3,12 +3,8 @@ import './App.css';
 
 import tasks from './sample/task.json';
 
-//Components
 import Tasks from './components/Tasks';
 import TaskForm from './components/TaskForm';
-
-//Para manejar metodos y en ves de pasar metodos de un componetne a otro
-// Se usa Redux para manejo globales. 
 
 class App extends Component {
 
@@ -27,10 +23,7 @@ class App extends Component {
     })
   }
 
-  //tratar de quitar esta tarea del arreglo, recibiendo el id que quiero eliminar
   deleteTask = (id) => {
-    // por cada tarea que empieze a recorrer es diferente al id  la que estan pasando
-    //Va a filtrarlo 
     const newTasks = this.state.tasks.filter(task => task.id !== id );
     this.setState({
       tasks: newTasks
@@ -53,7 +46,6 @@ class App extends Component {
   render() {
     return <div>
       <TaskForm addTask={this.addTask}/>
-      {/* Como pasar el boton delete al boton de delete en el task list  */}
       <Tasks tasks={this.state.tasks} deleteTask={this.deleteTask} checkDone={this.checkDone}/>
     </div>
   }
