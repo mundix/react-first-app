@@ -7,19 +7,12 @@ export default class TaskForm extends Component {
         description: ''
     }
 
-    //Esto no usa el metodo bind cuando asignamos el  = () => {}
-    // onSubmitEvent = (e) => {
-    //Si tiene un parametro no es necesario poner el ()
     onSubmitEvent = e => {
-        // console.log('Submitting...');
         e.preventDefault();        
         console.log(this.state);
     }
     onChangeEvent = e => {
-        console.log(e.target.name, e.target.value);
         this.setState({
-            // title: e.target.value
-            //para asignar debe estar dentro de un [variable] : valor asignar
             [e.target.name]: e.target.value
         })
     }
