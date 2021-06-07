@@ -7,10 +7,9 @@ import tasks from './sample/task.json';
 
 //Components
 import Tasks from './components/Tasks';
+import TaskForm from './components/TaskForm';
 
-//Proyecto Limpio 
-//#1 crear el component de mi app , heredando la caracteristica Component 
-//que se incluyo con las {Component}  en el import
+
 class App extends Component {
 
   state = {
@@ -19,7 +18,7 @@ class App extends Component {
 
   render() {
     return <div>
-      {/* Estpy pasando las tareas en props al component */}
+      <TaskForm/>
       <Tasks tasks={this.state.tasks} />
     </div>
   }
