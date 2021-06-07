@@ -7,6 +7,9 @@ import tasks from './sample/task.json';
 import Tasks from './components/Tasks';
 import TaskForm from './components/TaskForm';
 
+//Para manejar metodos y en ves de pasar metodos de un componetne a otro
+// Se usa Redux para manejo globales. 
+
 class App extends Component {
 
   state = {
