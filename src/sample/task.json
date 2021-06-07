@@ -21,6 +21,6 @@
         "id" : 3,
         "title" : "Task Four",
         "description" : "Description C",
-        "done" : false
+        "done" : true
     }
 ]
