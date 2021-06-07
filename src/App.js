@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
+
 //Importó el array del jason
 import tasks from './sample/task.json';
 
