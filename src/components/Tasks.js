@@ -5,12 +5,15 @@ import PropTypes from 'prop-types';
 
 class Tasks extends Component {
     render() {
+        // console.log("Llego a tasks: ",this.props);
         return (
             this.props.tasks.map(task => 
             <Task 
                 key={task.id} 
                 task={task} 
+                checkDone={this.props.checkDone}
                 deleteTask={this.props.deleteTask}
+                
                 />)
         )
         

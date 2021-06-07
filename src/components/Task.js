@@ -16,6 +16,7 @@ class Task extends Component {
 
         //con esto evito exribir this.props.task.title  solo {task}
         const {task} = this.props;
+        // console.log("Llego al Task id",this.props.task.id, this.props);
 
         // return <p className='red'>
         return <p style={this.StyleCompleted()}>
@@ -23,10 +24,13 @@ class Task extends Component {
             {task.description} - 
             {task.done} - 
             {task.id}
-            <input type="checkbox" />
+            <input type="checkbox" 
+                onChange={this.props.checkDone.bind(this, task.id)}
+            />
             <button 
             style={btnDeleteStyle} 
-            onClick={this.props.deleteTask.bind(this, task.id)}>x</button>
+            onClick={this.props.deleteTask.bind(this, task.id)}
+            >x</button>
         </p>
     }
 }
